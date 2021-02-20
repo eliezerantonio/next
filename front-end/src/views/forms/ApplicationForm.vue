@@ -1,7 +1,6 @@
 <template>
   <b-form @submit.stop.prevent="onSubmit" @reset.prevent="onReset">
     <div class="row">
-    
       <div class="col-12">
         <b-form-group id="input-group-description" label="Descrição:" label-for="text-description">
           <b-form-textarea
@@ -22,22 +21,25 @@
             id="input-budget"
             v-model="$v.form.budget.$model"
             type="number"
-            placeholder="Valor proposta..."
+            placeholder="Valor proposto..."
             aria-describedby="input-budget-feedback"
           ></b-form-input>
           <b-form-invalid-feedback
             :state="$v.form.budget.$dirty ? !$v.form.budget.$error : null"
           >Este campo deve ser informado.</b-form-invalid-feedback>
         </b-form-group>
- 
-     
+      </div>
+      <div class="col-12 text-right">
+        <b-button type="reset" variant="danger">Limpar</b-button>&nbsp;
+        <b-button type="submit" variant="primary">{{form.id ? "Alterar" : "Salvar"}}</b-button>
+      </div>
+    </div>
   </b-form>
 </template>
 
 <script>
 import { validationMixin } from "vuelidate";
-import { required, minLength } from "vuelidate/lib/validators";
-import moment from "moment";
+import { required } from "vuelidate/lib/validators";
 export default {
   mixins: [validationMixin],
   props: {
@@ -47,19 +49,16 @@ export default {
     form: {
       description: null,
       budget: null,
-   
     },
   }),
   validations: {
     form: {
-    
       description: {
         required
       },
       budget: {
         required
-      },
-    
+      }
     }
   },
   methods: {
@@ -67,9 +66,9 @@ export default {
       this.$v.form.$touch();
       if (this.$v.form.$anyError) return;
       this.$emit("submit", {
+        jobId: this.$route.params.id,
         description: this.form.description,
-        budget: this.form.budget,
-     
+        budget: this.form.budget
       });
     },
     onReset() {
@@ -78,17 +77,16 @@ export default {
         ? {
             description: this.data.description,
             budget: this.data.budget,
-     
           }
         : {
-           
             description: null,
             budget: null,
-         
           };
     }
   },
-
+  mounted() {
+    this.onReset()
+  }
 };
 </script>
 

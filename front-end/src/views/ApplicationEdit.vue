@@ -29,8 +29,8 @@ export default {
     async onSubmit(data) {
       try {
         const response = await apiProtected.patch("application/"+this.$route.params.applicationId, data);
-        const job = response.data.data;
-        this.$router.push(`/jobs/${applicationId.jobId}/show`);
+        const application = response.data.data;
+        this.$router.push(`/job/${application.jobId}/show`);
       } catch (error) {
         console.error(error);
         this.errorMessage = "Erro ao tentar salvar os dados.";
@@ -38,7 +38,7 @@ export default {
     }
   },
   async mounted() {
-    const response = await apiProtected(`job/${this.$route.params.applicationId}`);
+    const response = await apiProtected(`application/${this.$route.params.applicationId}`);
     this.job = response.data.data;
   }
 };
