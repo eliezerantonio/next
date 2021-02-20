@@ -7,8 +7,10 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-Vue.use(BootstrapVue);
+import authenticatedGuard from './router/authenticatedGuard'
 
+Vue.use(BootstrapVue);
+authenticatedGuard(router, store)
 Vue.config.productionTip = false
 
 new Vue({
