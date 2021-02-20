@@ -4,7 +4,11 @@
           <div class="col-12">
           <JobCard v-if="job" :job="job">
             <template slot="actions">
-              <b-button v-if="isJobsOwner" variant="primary" @click="() => $router.push(`./jobs/${job.id}/edit`)">Editar</b-button>
+                <b-button
+              v-if="isJobsOwner"
+              variant="primary"
+              @click="() => $router.push(`/jobs/${job.id}/edit`)"
+            >Editar</b-button>
             </template>
           </JobCard>
           </div>
