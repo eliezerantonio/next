@@ -6,6 +6,8 @@ import Login from '../views/Login.vue'
 import Dashboard from '../views/Dashboard.vue'
 import Profile from '../views/Profile.vue'
 
+
+
 Vue.use(VueRouter)
 
 const routes = [{
@@ -21,6 +23,7 @@ const routes = [{
             import ('../views/About.vue')
     },
     {
+        meta: { protected: true },
         path: '/jobs/:id/application/new',
         name: 'ApplicationsNew',
 
@@ -28,6 +31,7 @@ const routes = [{
             import ('../views/ApplicationNew.vue')
     },
     {
+        meta: { protected: true },
         path: '/jobs/:id/application/:applicationId/edit',
         name: 'ApplicationEdit',
 
@@ -36,18 +40,21 @@ const routes = [{
     },
 
     {
+        meta: { protected: true },
         path: '/jobs/:id/show',
         name: 'JobsShow',
 
         component: () =>
             import ('../views/JobsView.vue')
     }, {
+        meta: { protected: true },
         path: '/jobs/new',
         name: 'JobsNew',
 
         component: () =>
             import ('../views/JobsNew.vue')
     }, {
+        meta: { protected: true },
         path: '/jobs/:id/edit',
         name: 'JobsEdit',
 
@@ -65,15 +72,16 @@ const routes = [{
     }, {
         path: '/dashboard',
         name: 'Dashboard',
-        component: Dashboard
+        component: Dashboard,
+        meta: { protected: true }
     }, {
         children: [{
-
+            meta: { protected: true },
             path: '',
             component: () =>
                 import ('../views/parts/ProfileHome.vue'),
         }, {
-
+            meta: { protected: true },
             path: 'skills',
             component: () =>
                 import ('../views/parts/ProfileSkills.vue'),
@@ -83,14 +91,15 @@ const routes = [{
             component: () =>
                 import ('../views/parts/ProfilePortfolios.vue'),
         }, {
-
+            meta: { protected: true },
             path: 'pic',
             component: () =>
                 import ('../views/parts/ProfilePic.vue'),
         }, ],
         name: 'Profile',
         path: '/profile/:userId',
-        component: Profile
+        component: Profile,
+        meta: { protected: true }
 
     }
 ]
