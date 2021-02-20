@@ -19,7 +19,23 @@ const routes = [{
 
         component: () =>
             import ('../views/About.vue')
-    }, {
+    },
+    {
+        path: '/jobs/:id/application/new',
+        name: 'ApplicationsNew',
+
+        component: () =>
+            import ('../views/ApplicationNew.vue')
+    },
+    {
+        path: '/jobs/:id/application/:applicationId/edit',
+        name: 'ApplicationEdit',
+
+        component: () =>
+            import ('../views/ApplicationEdit.vue')
+    },
+
+    {
         path: '/jobs/:id/show',
         name: 'JobsShow',
 
