@@ -22,6 +22,7 @@ const routes = [{
         component: () =>
             import ('../views/About.vue')
     },
+    // Nova aplicacao
     {
         meta: { protected: true },
         path: '/jobs/:id/application/new',
@@ -30,6 +31,7 @@ const routes = [{
         component: () =>
             import ('../views/ApplicationNew.vue')
     },
+    //editar aplicacao
     {
         meta: { protected: true },
         path: '/jobs/:id/application/:applicationId/edit',
@@ -38,7 +40,7 @@ const routes = [{
         component: () =>
             import ('../views/ApplicationEdit.vue')
     },
-
+    //mostrar jobs
     {
         meta: { protected: true },
         path: '/jobs/:id/show',
@@ -46,14 +48,18 @@ const routes = [{
 
         component: () =>
             import ('../views/JobsView.vue')
-    }, {
+    },
+    //novo job
+    {
         meta: { protected: true },
         path: '/jobs/new',
         name: 'JobsNew',
 
         component: () =>
             import ('../views/JobsNew.vue')
-    }, {
+    },
+    //editar jobs
+    {
         meta: { protected: true },
         path: '/jobs/:id/edit',
         name: 'JobsEdit',
@@ -61,41 +67,58 @@ const routes = [{
         component: () =>
             import ('../views/JobsEdit.vue')
     },
+
+    //Registar
     {
         path: '/register',
         name: 'Register',
         component: Register
-    }, {
+    },
+    ///Login
+    {
         path: '/login',
         name: 'Login',
         component: Login
-    }, {
+    },
+    // Dashboard
+    {
         path: '/dashboard',
         name: 'Dashboard',
         component: Dashboard,
         meta: { protected: true }
-    }, {
+    },
+    // Perfil
+    {
         children: [{
-            meta: { protected: true },
-            path: '',
-            component: () =>
-                import ('../views/parts/ProfileHome.vue'),
-        }, {
-            meta: { protected: true },
-            path: 'skills',
-            component: () =>
-                import ('../views/parts/ProfileSkills.vue'),
-        }, {
+                meta: { protected: true },
+                path: '',
+                component: () =>
+                    import ('../views/parts/ProfileHome.vue'),
+            },
+            //skills
 
-            path: 'portfolios',
-            component: () =>
-                import ('../views/parts/ProfilePortfolios.vue'),
-        }, {
-            meta: { protected: true },
-            path: 'pic',
-            component: () =>
-                import ('../views/parts/ProfilePic.vue'),
-        }, ],
+            {
+                meta: { protected: true },
+                path: 'skills',
+                component: () =>
+                    import ('../views/parts/ProfileSkills.vue'),
+            },
+            //Porfolio
+            {
+
+                path: 'portfolios',
+                component: () =>
+                    import ('../views/parts/ProfilePortfolios.vue'),
+            },
+            //Foto perfil
+
+            {
+                meta: { protected: true },
+                path: 'pic',
+                component: () =>
+                    import ('../views/parts/ProfilePic.vue'),
+            },
+        ],
         name: 'Profile',
         path: '/profile/:userId',
         component: Profile,
