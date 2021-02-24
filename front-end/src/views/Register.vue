@@ -59,7 +59,7 @@
           <!--password confirm-->
           <b-form-group
             id="input-group-password-confirmation"
-            label="Senha "
+            label="Confirma Senha "
             label-for="input-password-confirmation"
           >
             <b-form-input

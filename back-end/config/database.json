@@ -2,21 +2,21 @@
     "development": {
         "username": "root",
         "password": "1223",
-        "database": "dworks",
+        "database": "next",
         "host": "127.0.0.1",
         "dialect": "mysql"
     },
     "test": {
         "username": "root",
         "password": "1223",
-        "database": "dworks",
+        "database": "next",
         "host": "127.0.0.1",
         "dialect": "mysql"
     },
     "production": {
         "username": "root",
         "password": "1223",
-        "database": "dworks",
+        "database": "next",
         "host": "127.0.0.1",
         "dialect": "mysql"
     }
