@@ -2,11 +2,11 @@ API para uma serviço de contactos de freelancers
 
 Doc: https://documenter.getpostman.com/view/11116335/TVsyfQwA 
 
-<width="350px"  src="https://github.com/eliezerantonio/next/blob/main/img/Screen%20Capture_select-area_20210224125104.png"> 
+<img width="350px"  src="https://github.com/eliezerantonio/next/blob/main/img/Screen%20Capture_select-area_20210224125104.png"> 
 
-<width="350px"  src="https://github.com/eliezerantonio/next/blob/main/img/Screen%20Capture_select-area_20210224125003.png"> 
-<width="350px"  src="https://github.com/eliezerantonio/next/blob/main/img/Screen%20Capture_select-area_20210224125049.png"> 
-<width="350px"  src="https://github.com/eliezerantonio/next/blob/main/img/Screen%20Capture_select-area_20210224125104.png"> 
+<img width="350px"  src="https://github.com/eliezerantonio/next/blob/main/img/Screen%20Capture_select-area_20210224125003.png"> 
+<img width="350px"  src="https://github.com/eliezerantonio/next/blob/main/img/Screen%20Capture_select-area_20210224125049.png"> 
+<img width="350px"  src="https://github.com/eliezerantonio/next/blob/main/img/Screen%20Capture_select-area_20210224125104.png"> 
 
 # database
 ## in mysql run
