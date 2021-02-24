@@ -30,7 +30,7 @@ export default {
       try {
         const response = await apiProtected.patch("job/"+this.$route.params.id, data);
         const job = response.data.data;
-        this.$router.push(`/jobs/${job.id}/show`);
+        this.$router.push(`./jobs/${job.id}/show`);
       } catch (error) {
         console.error(error);
         this.errorMessage = "Erro ao tentar salvar os dados.";

@@ -84,7 +84,7 @@ export default {
         this.job.selectedApplicationId = application.id
       } catch (error) {
         console.error(error);
-        this.errorMessage = "Erro ao tentar selecionar proposta.";
+        this.errorMessage = "Erro ao tentar selecionar proposta." +error;
       }
     }
   },

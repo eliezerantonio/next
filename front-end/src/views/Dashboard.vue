@@ -55,7 +55,6 @@
   </div>
 </template>
 
-
 <script>
 import { apiProtected } from "../services/apiService";
 import JobCard from "../components/JobCard"

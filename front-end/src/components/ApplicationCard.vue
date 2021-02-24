@@ -13,7 +13,7 @@
         <div class="row">
           <div
             class="col-6 col-sm-4 col-lg-3"
-            v-for="skill in application.Freelancer.UserSkill"
+            v-for="skill in application.Freelancer.UserSkills"
             :key="skill.id"
           >{{skill.Skill.name}}</div>
         </div>
