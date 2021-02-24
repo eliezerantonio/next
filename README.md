@@ -15,7 +15,7 @@ create database next;
 ```
 ##darabse 
 
-<width="350px"  src="https://github.com/eliezerantonio/next/blob/main/img/Screen%20Capture_select-area_20210224124941.png"> 
+<img width="350px"  src="https://github.com/eliezerantonio/next/blob/main/img/Screen%20Capture_select-area_20210224124941.png"> 
 
 # API HOW START
 after install nodejs
