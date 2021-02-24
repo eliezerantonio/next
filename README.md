@@ -20,15 +20,15 @@ create database next;
 # API HOW START
 after install nodejs
 ```
-1- npm install
+npm install
 
-2- npm install --save-dev sequelize-cli
+npm install --save-dev sequelize-cli
 
-3- npx sequelize db:migrate
+npx sequelize db:migrate
 
-4- sequelize db:seed:all 
+sequelize db:seed:all 
 
-5 - run in terminal : nodemon
+run in terminal : nodemon
 
 
 ```
